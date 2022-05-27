@@ -65,6 +65,28 @@ namespace Polymorphie
                 mammal.Sound();
             }
 
+
+            // At runtime it should be decided which method will be called.
+            // This is called dynamic polymorphism.
+            Console.WriteLine("Choose an animal: h for heyna, l for lion, p for horse");
+            char input = Convert.ToChar(Console.ReadLine());
+
+            switch (input)
+            {
+                case 'h':
+                    heyna.Sound();
+                    break;
+                case 'l':
+                    lion.Sound();
+                    break;
+                case 'p':
+                    horse.Sound();
+                    break;
+                default:
+                    Console.WriteLine("invalid input");
+                    break;
+            }
+
             Console.ReadLine();            
         }
     }
